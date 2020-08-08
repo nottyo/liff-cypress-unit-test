@@ -5,12 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:components": "vue-cli-service test:components"
   },
   "dependencies": {
+    "@line/liff": "^2.3.1",
     "core-js": "^3.6.5",
+    "sweetalert2": "^9.17.1",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vue-sweetalert2": "^3.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
@@ -19,9 +23,12 @@
     "@vue/cli-service": "~4.4.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "babel-eslint": "^10.1.0",
+    "cypress": "*",
+    "cypress-vue-unit-test": "3",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
+    "vue-cli-plugin-cypress-experimental": "~1.1.0",
     "vue-template-compiler": "^2.6.11"
   }
 }

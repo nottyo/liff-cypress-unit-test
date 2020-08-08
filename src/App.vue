@@ -8,6 +8,28 @@
   </div>
 </template>
 
+<script>
+import liff from '@line/liff';
+import Vue from 'vue';
+
+export default {
+  name: 'App',
+  created: async () => {
+    try {
+      await liff.init({
+        liffId: process.env.VUE_APP_LINE_LIFF_ID,
+      });
+    } catch (error) {
+      Vue.swal({
+        icon: 'error',
+        title: '<h2 data-testid="errorTitle">LIFF init failed</h2>',
+        html: `<span data-testid="errorMsg">${error.message}</span>`,
+      });
+    }
+  },
+};
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
